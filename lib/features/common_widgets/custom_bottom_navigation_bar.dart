@@ -14,7 +14,11 @@ int selectedIndex=0;
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+
+
       selectedItemColor: AppColors.themeColor,
+        unselectedItemColor: AppColors.lightGray,
+        unselectedLabelStyle: TextStyle(color: AppColors.black),
         currentIndex: widget.currentIndex??0,
         onTap: (index){
           setState(() {

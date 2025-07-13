@@ -21,7 +21,8 @@ class App extends StatelessWidget {
   }
 
   _getHome(){
-    print("${MyHiveBox.instance.getBox().get("login",defaultValue: null)}");
-    return MobileLogin();
+    String ? isLogin=MyHiveBox.instance.getBox().get("login",defaultValue: null);
+
+    return isLogin=="yes"?DashboardScreen(): MobileLogin();
   }
 }
