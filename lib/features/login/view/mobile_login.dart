@@ -65,8 +65,8 @@ class MobileLogin extends StatelessWidget {
                           SnackBar(content: Text("Phone number verified and user signed in")),
                         );
 
-                        MyHiveBox.instance.getBox().put("login","yes" );
-                        Navigator.pushNamed(context, AppRoutes.dashboardScreen);
+                        MyHiveBox.instance.getBox().put("login","${LoginController.mobileNumber.text}" );
+                        Navigator.pushNamed(context, AppRoutes.introScreen);
                       } catch (e) {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(content: Text("Failed to sign in: $e")),

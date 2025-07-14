@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:work_manager/features/dashboard/dashboard_screen.dart';
+import 'package:work_manager/features/intro/Intro_screen.dart';
 
 class AppRoutes {
   static const String home="/";
 static const String dashboardScreen="/dashboardScreen";
+  static const String introScreen="/introScreen";
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
     case dashboardScreen:
@@ -11,7 +13,9 @@ static const String dashboardScreen="/dashboardScreen";
       case home:
 
         return CustomPageRoute(builder: (_)=>DashboardScreen(), settings: settings);
+      case introScreen:
 
+        return CustomPageRoute(builder: (_)=>IntroScreen(), settings: settings);
       default:
         return CustomPageRoute(
             builder: (_) => Scaffold(
